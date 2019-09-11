@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="x_323454_tabletest_external_collaboration" label="zoe_external_collaboration" max_length="40" name="x_323454_tabletest_zoe_external_collaboration" type="collection">
+        <element label="Zoe work" max_length="10" name="zoe_work" type="string"/>
+    </element>
+</database>

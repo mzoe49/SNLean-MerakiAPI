@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="testProcessManager" max_length="40" name="x_323454_tabletest_testprocessmanager" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Status" max_length="50" name="status" type="string"/>
+    </element>
+</database>

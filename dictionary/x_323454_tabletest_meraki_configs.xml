@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="meraki_configs" max_length="40" name="x_323454_tabletest_meraki_configs" type="collection">
+        <element label="Api_Key" max_length="40" name="api_key" type="string"/>
+    </element>
+</database>

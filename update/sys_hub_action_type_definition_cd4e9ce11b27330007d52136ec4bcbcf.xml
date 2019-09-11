@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>getmerakidata2</internal_name>
+        <label_cache>[{"name":"{{action.apikey}}","label":"action➛APIKey","type":"action","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].d}}","label":"step➛getMerakiData2➛d","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].da}}","label":"step➛getMerakiData2➛da","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].dat}}","label":"step➛getMerakiData2➛dat","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].data}}","label":"step➛getMerakiData2➛data","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].s}}","label":"step➛getMerakiData2➛s","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].st}}","label":"step➛getMerakiData2➛st","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].sta}}","label":"step➛getMerakiData2➛sta","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].stat}}","label":"step➛getMerakiData2➛stat","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].statu}}","label":"step➛getMerakiData2➛statu","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].status}}","label":"step➛getMerakiData2➛status","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].J}}","label":"step➛getMerakiData2➛J","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JS}}","label":"step➛getMerakiData2➛JS","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JSO}}","label":"step➛getMerakiData2➛JSO","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JSON}}","label":"step➛getMerakiData2➛JSON","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JSOND}}","label":"step➛getMerakiData2➛JSOND","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JSONDa}}","label":"step➛getMerakiData2➛JSONDa","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JSONDat}}","label":"step➛getMerakiData2➛JSONDat","type":"step","ref":""},{"name":"{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JSONData}}","label":"step➛getMerakiData2➛JSONData","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>0bb3c9351ba3330007d52136ec4bcbdc</latest_snapshot>
+        <master_snapshot/>
+        <name>getMerakiData2</name>
+        <outputs/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 08:30:11</sys_created_on>
+        <sys_id>cd4e9ce11b27330007d52136ec4bcbcf</sys_id>
+        <sys_mod_count>158</sys_mod_count>
+        <sys_name>getMerakiData2</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_cd4e9ce11b27330007d52136ec4bcbcf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-29 05:57:04</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=cd4e9ce11b27330007d52136ec4bcbcf"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cd4e9ce11b27330007d52136ec4bcbcf"/>
+    <sys_element_mapping action="delete_multiple" query="id=cd4e9ce11b27330007d52136ec4bcbcf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>data</field>
+        <id>cd4e9ce11b27330007d52136ec4bcbcf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 08:33:14</sys_created_on>
+        <sys_id>bdfe54651b27330007d52136ec4bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 08:33:14</sys_updated_on>
+        <table>var__m_sys_hub_action_output_cd4e9ce11b27330007d52136ec4bcbcf</table>
+        <value>{{step[b1ea6571-c867-4920-8d66-89e55e73181e].data}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>jsondata</field>
+        <id>cd4e9ce11b27330007d52136ec4bcbcf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-29 05:51:26</sys_created_on>
+        <sys_id>198309351ba3330007d52136ec4bcb6a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-29 05:51:26</sys_updated_on>
+        <table>var__m_sys_hub_action_output_cd4e9ce11b27330007d52136ec4bcbcf</table>
+        <value>{{step[b1ea6571-c867-4920-8d66-89e55e73181e].JSONData}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>stutas</field>
+        <id>cd4e9ce11b27330007d52136ec4bcbcf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 08:33:14</sys_created_on>
+        <sys_id>71fe54651b27330007d52136ec4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 08:33:14</sys_updated_on>
+        <table>var__m_sys_hub_action_output_cd4e9ce11b27330007d52136ec4bcbcf</table>
+        <value>{{step[b1ea6571-c867-4920-8d66-89e55e73181e].status}}</value>
+    </sys_element_mapping>
+</record_update>

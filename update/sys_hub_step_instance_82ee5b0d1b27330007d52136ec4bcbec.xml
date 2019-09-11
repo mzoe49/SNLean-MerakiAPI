@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="getMerakiData">6c9e97c91b27330007d52136ec4bcb9d</action>
+        <cid>78a4d93d-f3d9-48b7-ab2a-71d71fefeab1</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>getMerakiData</label>
+        <order>1</order>
+        <outputs/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:14:53</sys_created_on>
+        <sys_id>82ee5b0d1b27330007d52136ec4bcbec</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>getMerakiData</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_step_instance_82ee5b0d1b27330007d52136ec4bcbec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 09:54:50</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=82ee5b0d1b27330007d52136ec4bcbec"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>82ee5b0d1b27330007d52136ec4bcbec</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:14:53</sys_created_on>
+        <sys_id>42ee9b0d1b27330007d52136ec4bcb00</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 09:54:50</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+// ... code ...
+  
+		//格納用変数宣言
+		var merakiData = []; 
+		var dataRow;
+
+		//APIKeyを取得する
+		var merakiAPI = new merakiAPI2();
+ 		gs.info("#get_APIKey : " + merakiAPI.APIKey);
+  
+  		//organizationデータを取得する
+		merakiAPI.getOrganizations();
+		var orgData = JSON.parse(merakiAPI.organizationData);
+		for ( i=0; i&lt;orgData.length; i++ ) 
+		{
+			//gs.info(orgData[i].id + " : " + orgData[i].name);
+
+			//Networkデータを取得する
+			merakiAPI.getNetworks(orgData[i].id);
+			var netData = JSON.parse(merakiAPI.networkData);
+			for ( j=0; j&lt;netData.length; j++ ) 
+			{
+				//gs.info(netData[j].id + " : " + netData[j].name);
+			
+				//Deviceデータを取得する
+ 				merakiAPI.getDevices(netData[j].id);
+ 				var deviceData = JSON.parse(merakiAPI.deviceData);
+ 				for ( k=0; k&lt;deviceData.length; k++ ) 
+ 				{
+ 					//gs.info(deviceData[k].serial + " ： " + deviceData[k].model);
+
+					//配列へ格納
+ 					dataRow = {}; 
+ 					dataRow.meraki_organization_id = orgData[i].id;
+ 					dataRow.meraki_organization_name = orgData[i].name;
+ 					dataRow.network_id = netData[j].id;
+ 					dataRow.meraki_network_name = netData[j].name;
+ 					dataRow.serial_number = deviceData[k].serial;
+ 					dataRow.u_host_name = deviceData[k].name;
+ 					dataRow.u_product_m = deviceData[k].model;
+ 					dataRow.u_ipaddress = deviceData[k].lanIp;
+ 					dataRow.meraki_address = deviceData[k].address;
+ 					merakiData.push(dataRow);
+ 				}
+			}
+		}
+		
+		//配列オブジェクトをJSON形式に変換
+		if (merakiData.length&gt;0)	{
+			gs.info("データを格納します。");
+			gs.info("格納件数：" + merakiData.length + "件");
+          
+			outputs.resStatus = 200;
+			outputs.resBody = JSON.stringify(merakiData); 		
+          
+		}else{
+			gs.info("データが存在しませんでした。");
+			outputs.resStatus = 404;
+			outputs.resBody = null;
+		}
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>82ee5b0d1b27330007d52136ec4bcbec</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:14:53</sys_created_on>
+        <sys_id>8eee5b0d1b27330007d52136ec4bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 09:14:53</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+</record_update>

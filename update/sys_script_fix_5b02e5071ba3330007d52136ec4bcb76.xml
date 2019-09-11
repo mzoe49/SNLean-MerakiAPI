@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>true</flush_cache>
+        <name>DeleteData</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[gs.info('データテストデータ一括削除');
+
+//テーブル名を適宜変更
+var table_name = 'x_323454_tabletest_meraki_external_collaboration';
+var gr = new GlideRecord(table_name);
+
+//** 検索条件は必要に応じて設定 **
+//gr.addQuery('customername', 'TESTCUSTOMER');　// customernameで対象データを絞り込む
+//gr.addQuery('product', 'TESTPRODUCT');        // product
+
+//削除対象抽出
+gr.query();
+
+//事前に削除件数を取得
+var targetCount = gr.getRowCount();  
+
+if (targetCount>0){
+	//一括削除実行
+	gr.deleteMultiple();
+	gs.info(targetCount + '件を削除しました。');
+}else{
+	//対象なし
+	gs.info('削除対象となるデータは存在しません。');
+}
+
+
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-02 05:20:13</sys_created_on>
+        <sys_id>5b02e5071ba3330007d52136ec4bcb76</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>DeleteData</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_script_fix_5b02e5071ba3330007d52136ec4bcb76</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-02 05:27:23</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>getmerakiapikey</internal_name>
+        <label_cache>[{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].}}","label":"step➛getMerakiData➛","type":"step","ref":""},{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].t}}","label":"step➛getMerakiData➛t","type":"step","ref":""},{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].te}}","label":"step➛getMerakiData➛te","type":"step","ref":""},{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].tes}}","label":"step➛getMerakiData➛tes","type":"step","ref":""},{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].test}}","label":"step➛getMerakiData➛test","type":"step","ref":""},{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].teste}}","label":"step➛getMerakiData➛teste","type":"step","ref":""},{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].testes}}","label":"step➛getMerakiData➛testes","type":"step","ref":""},{"name":"{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].testest}}","label":"step➛getMerakiData➛testest","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>a36827c11b67330007d52136ec4bcb67</latest_snapshot>
+        <master_snapshot>a9402b4d1b27330007d52136ec4bcb45</master_snapshot>
+        <name>getMerakiData</name>
+        <outputs/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:13:25</sys_created_on>
+        <sys_id>6c9e97c91b27330007d52136ec4bcb9d</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>getMerakiData</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_6c9e97c91b27330007d52136ec4bcb9d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:37:23</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=6c9e97c91b27330007d52136ec4bcb9d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6c9e97c91b27330007d52136ec4bcb9d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>6c9e97c91b27330007d52136ec4bcb9d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 10:30:38</sys_created_on>
+        <sys_id>f7307b091b67330007d52136ec4bcbb0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:36:37</sys_updated_on>
+        <value/>
+        <variable display_value="">3f307b091b67330007d52136ec4bcb9a</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6c9e97c91b27330007d52136ec4bcb9d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resbody</field>
+        <id>6c9e97c91b27330007d52136ec4bcb9d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:45:48</sys_created_on>
+        <sys_id>72f5a7411b67330007d52136ec4bcb6c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:37:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_6c9e97c91b27330007d52136ec4bcb9d</table>
+        <value>{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].testest}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resstatus</field>
+        <id>6c9e97c91b27330007d52136ec4bcb9d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:45:48</sys_created_on>
+        <sys_id>36f5a7411b67330007d52136ec4bcb6c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:37:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_6c9e97c91b27330007d52136ec4bcb9d</table>
+        <value>{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].testest}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>test</field>
+        <id>6c9e97c91b27330007d52136ec4bcb9d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 10:30:38</sys_created_on>
+        <sys_id>77307b091b67330007d52136ec4bcbb0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:37:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_6c9e97c91b27330007d52136ec4bcb9d</table>
+        <value>aaaa{{step[78a4d93d-f3d9-48b7-ab2a-71d71fefeab1].testest}}</value>
+    </sys_element_mapping>
+</record_update>

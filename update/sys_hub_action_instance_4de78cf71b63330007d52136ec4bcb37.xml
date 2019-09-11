@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="getMerakiData2">0bb3c9351ba3330007d52136ec4bcbdc</action_type>
+        <action_type_parent display_value="getMerakiData2">cd4e9ce11b27330007d52136ec4bcbcf</action_type_parent>
+        <comment/>
+        <compiled_snapshot>0bb3c9351ba3330007d52136ec4bcbdc</compiled_snapshot>
+        <display_text/>
+        <flow display_value="collaboration_meraki2">38e78cf71b63330007d52136ec4bcb13</flow>
+        <order>4.1</order>
+        <parent_ui_id>8ae454d6-f660-47d0-81ad-6973864c335e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-04 06:38:45</sys_created_on>
+        <sys_id>4de78cf71b63330007d52136ec4bcb37</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_action_instance_4de78cf71b63330007d52136ec4bcb37</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-04 06:38:45</sys_updated_on>
+        <ui_id>b28a5bbd-eda1-40f2-bc1b-d50fabca405b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4de78cf71b63330007d52136ec4bcb37"/>
+    <sys_element_mapping action="delete_multiple" query="id=4de78cf71b63330007d52136ec4bcb37"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>apikey</field>
+        <id>4de78cf71b63330007d52136ec4bcb37</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-04 06:38:45</sys_created_on>
+        <sys_id>85e78cf71b63330007d52136ec4bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-04 06:38:45</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0bb3c9351ba3330007d52136ec4bcbdc</table>
+        <value>{{4f35b6b0-e3f7-4ff6-b746-5a034b845570.apikey}}</value>
+    </sys_element_mapping>
+</record_update>

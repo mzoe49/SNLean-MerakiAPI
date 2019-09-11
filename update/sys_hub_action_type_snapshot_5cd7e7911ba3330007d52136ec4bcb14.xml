@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>getmerakiorganizations</internal_name>
+        <label_cache>[{"name":"{{action.apikey}}","label":"action➛APIKey","type":"action","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].o}}","label":"step➛getMerakiOrganizations➛o","type":"step","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].or}}","label":"step➛getMerakiOrganizations➛or","type":"step","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].org}}","label":"step➛getMerakiOrganizations➛org","type":"step","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].orgD}}","label":"step➛getMerakiOrganizations➛orgD","type":"step","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].orgDa}}","label":"step➛getMerakiOrganizations➛orgDa","type":"step","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].orgDat}}","label":"step➛getMerakiOrganizations➛orgDat","type":"step","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].orgData}}","label":"step➛getMerakiOrganizations➛orgData","type":"step","ref":""},{"name":"{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].status}}","label":"step➛getMerakiOrganizations➛status","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>getMerakiOrganizations</name>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="getMerakiOrganizations">4b26eb111ba3330007d52136ec4bcbf3</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 04:32:18</sys_created_on>
+        <sys_id>5cd7e7911ba3330007d52136ec4bcb14</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>getMerakiOrganizations</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_5cd7e7911ba3330007d52136ec4bcb14</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 04:32:18</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=5cd7e7911ba3330007d52136ec4bcb14"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5cd7e7911ba3330007d52136ec4bcb14"/>
+    <sys_element_mapping action="delete_multiple" query="id=5cd7e7911ba3330007d52136ec4bcb14"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>orgdata</field>
+        <id>5cd7e7911ba3330007d52136ec4bcb14</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 04:32:18</sys_created_on>
+        <sys_id>98d7e7911ba3330007d52136ec4bcb51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 04:32:18</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5cd7e7911ba3330007d52136ec4bcb14</table>
+        <value>{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].orgData}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>5cd7e7911ba3330007d52136ec4bcb14</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 04:32:18</sys_created_on>
+        <sys_id>5cd7e7911ba3330007d52136ec4bcb51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 04:32:18</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5cd7e7911ba3330007d52136ec4bcb14</table>
+        <value>{{step[0343e1f1-d239-4f9e-8ffa-f119527c0ec0].status}}</value>
+    </sys_element_mapping>
+</record_update>

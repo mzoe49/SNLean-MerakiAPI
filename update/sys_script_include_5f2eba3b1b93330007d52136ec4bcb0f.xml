@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_323454_tabletest.merakiData</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>merakiData</name>
+        <script><![CDATA[var merakiData = Class.create();
+merakiData.prototype = {
+    initialize: function() {},
+
+	//*********************************************************
+	//meraki側よりデータを取得する
+	//*********************************************************
+	getMerakiData: function() {
+ 		gs.info("#merakiData Get Start!!");
+
+		//格納用変数宣言
+		var merakiData = []; 
+		var dataRow;
+
+		//APIKeyを取得する
+		var merakiAPI = new merakiAPI2();
+ 		gs.info("#get_APIKey : " + merakiAPI.APIKey);
+
+		//organizationデータを取得する
+		merakiAPI.getOrganizations();
+		var orgData = JSON.parse(merakiAPI.organizationData);
+		for ( i=0; i<orgData.length; i++ ) 
+		{
+			//gs.info(orgData[i].id + " : " + orgData[i].name);
+
+			//Networkデータを取得する
+			merakiAPI.getNetworks(orgData[i].id);
+			var netData = JSON.parse(merakiAPI.networkData);
+			for ( j=0; j<netData.length; j++ ) 
+			{
+				//gs.info(netData[j].id + " : " + netData[j].name);
+			
+				//Deviceデータを取得する
+ 				merakiAPI.getDevices(netData[j].id);
+ 				var deviceData = JSON.parse(merakiAPI.deviceData);
+ 				for ( k=0; k<deviceData.length; k++ ) 
+ 				{
+ 					//gs.info(deviceData[k].serial + " ： " + deviceData[k].model);
+
+					//配列へ格納
+ 					dataRow = {}; 
+ 					dataRow.meraki_organization_id = orgData[i].id;
+ 					dataRow.meraki_organization_name = orgData[i].name;
+ 					dataRow.network_id = netData[j].id;
+ 					dataRow.meraki_network_name = netData[j].name;
+ 					dataRow.serial_number = deviceData[k].serial;
+ 					dataRow.u_host_name = deviceData[k].name;
+ 					dataRow.u_product_m = deviceData[k].model;
+ 					dataRow.u_ipaddress = deviceData[k].lanIp;
+ 					dataRow.meraki_address = deviceData[k].address;
+ 					merakiData.push(dataRow);
+ 				}
+			}
+		}
+		
+		//gs.info(merakiData);
+		//配列オブジェクトをJSON形式に変換
+		var rtn;
+		if (merakiData.length>0)	{
+			gs.info("データを格納します");
+			rtn = JSON.stringify(merakiData); 		
+		}else{
+			gs.info("データが存在しませんでした。");
+			rtn = null;
+		}
+		
+		return rtn;
+	},
+    type: 'merakiData'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-23 09:41:23</sys_created_on>
+        <sys_id>5f2eba3b1b93330007d52136ec4bcb0f</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_name>merakiData</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_script_include_5f2eba3b1b93330007d52136ec4bcb0f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-26 08:11:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

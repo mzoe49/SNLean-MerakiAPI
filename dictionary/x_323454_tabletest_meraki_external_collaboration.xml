@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="x_323454_tabletest_external_collaboration" label="meraki_external_collaboration" max_length="40" name="x_323454_tabletest_meraki_external_collaboration" type="collection">
+        <element label="Meraki_Address" max_length="255" name="meraki_address" type="string"/>
+        <element label="Meraki_Network_Name" max_length="255" name="meraki_network_name" type="string"/>
+        <element label="Meraki_Organization_Id" max_length="18" name="meraki_organization_id" type="string"/>
+        <element label="Meraki_Organization_Name" max_length="255" name="meraki_organization_name" type="string"/>
+    </element>
+</database>

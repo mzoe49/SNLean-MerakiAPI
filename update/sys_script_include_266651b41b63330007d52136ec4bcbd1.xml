@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_323454_tabletest.merakiAPI2</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>merakiAPI2</name>
+        <script><![CDATA[var merakiAPI2 = Class.create();
+merakiAPI2.prototype = {
+    initialize: function() {
+		//===============================================
+		//初期処理～APIKey取得
+		//===============================================
+		var gr = new GlideRecord("x_323454_tabletest_meraki_configs");
+		gr.query();
+		while (gr.next()) {
+			this.APIKey = gr.api_key;
+		}
+	},
+	//===============================================
+	//organizationデータ取得
+	//===============================================
+	getOrganizations: function() {
+		var rest = new sn_ws.RESTMessageV2('x_323454_tabletest.merakiOrganizations', 'Default GET');
+		rest.setStringParameterNoEscape('APIKey', this.APIKey);
+		var body;
+		var res = rest.execute(); //Get organization information
+		var httpStatus = res.getStatusCode(); 
+		if(httpStatus == 200){	//org取得のhttpステータスが404の場合、次のAPIキーの取得処理に飛ぶ
+			this.organizationData = res.getBody();
+		}else{
+			this.organizationData = null;
+			gs.info("[External collaboration] [warning] [httpStatus : "+httpStatus+"] [API key name : " + this.APIKey + "] [failed to get organization.]");
+		}
+	},
+	//===============================================
+	//Networkデータ取得
+	//===============================================
+	getNetworks: function(organizationId){
+		var rest = new sn_ws.RESTMessageV2('x_323454_tabletest.merakiNetworks', 'Default GET');
+		rest.setStringParameterNoEscape('APIKey', this.APIKey);
+		rest.setStringParameterNoEscape('organizationId', organizationId);
+		var body;
+		var res = rest.execute(); //Get organization information
+		var httpStatus = res.getStatusCode(); 
+		if(httpStatus == 200){	//org取得のhttpステータスが404の場合、次のAPIキーの取得処理に飛ぶ
+			this.networkData = res.getBody();
+		}else{
+			this.networkData = null;
+			gs.info("[External collaboration] [warning] [httpStatus : "+httpStatus+"] [API key : " + this.APIKey + "] [failed to get network.]");
+		}
+	},
+	//===============================================
+	//Deviceデータ取得
+	//===============================================
+	getDevices: function(networkId){
+		var rest = new sn_ws.RESTMessageV2('x_323454_tabletest.merakiDevices', 'Default GET');
+		rest.setStringParameterNoEscape('APIKey', this.APIKey);
+		rest.setStringParameterNoEscape('networkId', networkId);
+		var body;
+		var res = rest.execute(); //Get organization information
+		var httpStatus = res.getStatusCode(); 
+		if(httpStatus == 200){	//org取得のhttpステータスが404の場合、次のAPIキーの取得処理に飛ぶ
+			this.deviceData = res.getBody();
+		}else{
+			this.deviceData = null;
+			gs.info("[External collaboration] [warning] [httpStatus : "+httpStatus+"] [API key : " + this.APIKey + "] [failed to get device.]");
+		}
+	},
+    type: 'merakiAPI2'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-26 04:40:35</sys_created_on>
+        <sys_id>266651b41b63330007d52136ec4bcbd1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>merakiAPI2</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_script_include_266651b41b63330007d52136ec4bcbd1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-26 06:28:18</sys_updated_on>
+    </sys_script_include>
+</record_update>

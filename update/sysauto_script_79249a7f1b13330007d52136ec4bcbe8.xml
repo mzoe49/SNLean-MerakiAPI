@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>ScriptTest03</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-08-23 06:35:52</run_start>
+        <run_time>1969-12-31 15:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[//==========================================
+//merakiデータ取得
+//==========================================
+gs.debug("********************************");
+//jslog("********************************");
+var strTime = new GlideDateTime();
+
+//データ取得
+var objMerakiData = new merakiData();
+var merakiData = objMerakiData.getMerakiData();
+
+//データ登録
+putExtData(merakiData);
+
+var endTime = new GlideDateTime();
+
+gs.info("開始時間："+strTime);
+gs.info("終了時間："+endTime);
+gs.info("件数："+JSON.parse(merakiData.length));
+
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-23 06:36:35</sys_created_on>
+        <sys_id>79249a7f1b13330007d52136ec4bcbe8</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>ScriptTest03</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sysauto_script_79249a7f1b13330007d52136ec4bcbe8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-30 06:46:17</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

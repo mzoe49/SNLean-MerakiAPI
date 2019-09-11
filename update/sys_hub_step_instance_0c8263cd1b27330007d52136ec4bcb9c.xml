@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="putExtData">c0526b8d1b27330007d52136ec4bcb50</action>
+        <cid>614fd433-e6de-45ec-8475-6ccbe9b8c2e2</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>putExtData</label>
+        <order>1</order>
+        <outputs/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:30:35</sys_created_on>
+        <sys_id>0c8263cd1b27330007d52136ec4bcb9c</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>putExtData</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_step_instance_0c8263cd1b27330007d52136ec4bcb9c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-29 05:53:47</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0c8263cd1b27330007d52136ec4bcb9c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0c8263cd1b27330007d52136ec4bcb9c</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:30:35</sys_created_on>
+        <sys_id>088263cd1b27330007d52136ec4bcbbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 09:30:35</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0c8263cd1b27330007d52136ec4bcb9c</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:30:35</sys_created_on>
+        <sys_id>c88263cd1b27330007d52136ec4bcbbe</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-29 04:29:08</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+
+  	gs.info("データを登録します。");
+  
+  	//オブジェクト型に変換
+  	var merakiData = JSON.parse(inputs.resBody);
+  
+  	gs.info("登録予定件数：" + merakiData.length + "件" );
+
+	//取得したデータを外部連携用ワークテーブルへ登録する。
+	var gr = new GlideRecord('x_323454_tabletest_meraki_external_collaboration'); // set inserted table
+	for(var i = 0; i &lt; merakiData.length; i++ ){
+		gr.initialize();
+		gr.network_id = merakiData[i].network_id;
+		gr.serial_number = merakiData[i].serial_number;
+		gr.u_host_name = merakiData[i].u_host_name;
+		gr.u_ipaddress = merakiData[i].u_ipaddress;
+		gr.u_product_m = merakiData[i].u_product_m;
+		gr.meraki_address = merakiData[i].meraki_address;
+		gr.meraki_organization_id = merakiData[i].meraki_organization_id;
+		gr.meraki_organization_name = merakiData[i].meraki_organization_name;
+		gr.meraki_network_name = merakiData[i].meraki_network_name;
+		gr.insert();   // insert new record
+	}
+	gs.info("登録終了時カウント："+i);
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0c8263cd1b27330007d52136ec4bcb9c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>0c8263cd1b27330007d52136ec4bcb9c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:30:35</sys_created_on>
+        <sys_id>c08263cd1b27330007d52136ec4bcbbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 09:30:35</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resBody</field>
+        <id>0c8263cd1b27330007d52136ec4bcb9c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 10:19:13</sys_created_on>
+        <sys_id>50ad2f851b67330007d52136ec4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:19:13</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0c8263cd1b27330007d52136ec4bcb9c</table>
+        <value>{{action.resbody}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resJSON</field>
+        <id>0c8263cd1b27330007d52136ec4bcb9c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-29 05:53:47</sys_created_on>
+        <sys_id>730401751ba3330007d52136ec4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-29 05:53:47</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0c8263cd1b27330007d52136ec4bcb9c</table>
+        <value>{{action.resjson}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resStatus</field>
+        <id>0c8263cd1b27330007d52136ec4bcb9c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 10:19:13</sys_created_on>
+        <sys_id>9cad2f851b67330007d52136ec4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:19:13</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0c8263cd1b27330007d52136ec4bcb9c</table>
+        <value>{{action.resstatus}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>0c8263cd1b27330007d52136ec4bcb9c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 09:30:35</sys_created_on>
+        <sys_id>848263cd1b27330007d52136ec4bcbbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 09:30:35</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

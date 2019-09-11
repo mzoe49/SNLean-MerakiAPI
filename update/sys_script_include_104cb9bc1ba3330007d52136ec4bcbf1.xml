@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_323454_tabletest.putExtData</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>putExtData</name>
+        <script><![CDATA[function putExtData(aExtData) {
+try{
+	//引数のJSONデータをオブジェクトに変換する
+	var extData = JSON.parse(aExtData);
+
+	gs.info("Insert前件数："+extData.length);
+
+	//取得したデータを外部連携用ワークテーブルへ登録する。
+	var gr = new GlideRecord('x_323454_tabletest_meraki_external_collaboration'); // set inserted table
+	for(var i = 0; i < extData.length; i++ ){
+		gr.initialize();
+		gr.network_id = extData[i].network_id;
+		gr.serial_number = extData[i].serial_number;
+		gr.u_host_name = extData[i].u_host_name;
+		gr.u_ipaddress = extData[i].u_ipaddress;
+		gr.u_product_m = extData[i].u_product_m;
+		gr.meraki_address = extData[i].meraki_address;
+		gr.meraki_organization_id = extData[i].meraki_organization_id;
+		gr.meraki_organization_name = extData[i].meraki_organization_name;
+		gr.meraki_network_name = extData[i].meraki_network_name;
+		gr.insert();   // insert new record
+	}
+	gs.info("Insert終了時カウント："+i);
+}
+catch(ex)
+	{
+		gs.info("Insert失敗。");
+		gs.info(ex);
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-26 07:29:27</sys_created_on>
+        <sys_id>104cb9bc1ba3330007d52136ec4bcbf1</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>putExtData</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_script_include_104cb9bc1ba3330007d52136ec4bcbf1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-29 04:27:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

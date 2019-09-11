@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_ipaddress" label="U_IpAddress" language="en" table="x_323454_tabletest_external_collaboration">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_ipaddress</element>
+            <help/>
+            <hint/>
+            <label>U_IpAddress</label>
+            <language>en</language>
+            <name>x_323454_tabletest_external_collaboration</name>
+            <plural>U_IpAddress</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-08-13 02:45:35</sys_created_on>
+            <sys_id>c78f71ac1b13330007d52136ec4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>U_IpAddress</sys_name>
+            <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+            <sys_update_name>sys_documentation_x_323454_tabletest_external_collaboration_u_ipaddress_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-08-13 02:45:35</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

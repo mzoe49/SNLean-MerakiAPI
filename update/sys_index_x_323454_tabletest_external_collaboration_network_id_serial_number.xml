@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>network_id,serial_number</col_name_string>
+        <index_col_name>384d792c1b13330007d52136ec4bcb5b,05ed39e81b13330007d52136ec4bcb08</index_col_name>
+        <logical_table_name>x_323454_tabletest_external_collaboration</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2019-08-13 05:55:11</sys_created_on>
+        <sys_id>98fa2a281b93330007d52136ec4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_323454_tabletest_external_collaboration</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_index_x_323454_tabletest_external_collaboration_network_id_serial_number</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-08-13 05:55:11</sys_updated_on>
+        <table display_value="external_collaboration" name="x_323454_tabletest_external_collaboration">86cbf1e81b13330007d52136ec4bcb4e</table>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

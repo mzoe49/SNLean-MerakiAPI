@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="getMerakiData2">0e0620a91b27330007d52136ec4bcbcf</action>
+        <cid>b1ea6571-c867-4920-8d66-89e55e73181e</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>getMerakiData2</label>
+        <order>1</order>
+        <outputs/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 09:04:07</sys_created_on>
+        <sys_id>ce0620a91b27330007d52136ec4bcbe5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>getMerakiData2</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_step_instance_ce0620a91b27330007d52136ec4bcbe5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 09:04:08</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ce0620a91b27330007d52136ec4bcbe5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>ce0620a91b27330007d52136ec4bcbe5</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 09:04:08</sys_created_on>
+        <sys_id>1e0620a91b27330007d52136ec4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 09:04:08</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+	gs.info("MerakiDataを取得します。");  
+
+  	//***********************************
+  	//Oraganization取得
+  	//***********************************
+  	var orgRest = new sn_ws.RESTMessageV2('x_323454_tabletest.merakiOrganizations', 'Default GET');
+	orgRest.setStringParameterNoEscape('APIKey', inputs.APIKey);
+	var orgBody;
+	var orgRes = rest.execute(); //Get organization information
+	var orgStatus = orgRes.getStatusCode(); 
+	if(orgStatus == 200) {	//org取得のhttpステータスが404の場合、次のAPIキーの取得処理に飛ぶ
+    	orgBody = orgRes.getBody();
+    } else {
+    	orgBody = null;
+      gs.info("[External collaboration] [warning] [status : "+orgStatus+"] [API key name : " + inputs.APIKey + "] [failed to get organization.]");
+      
+    }
+
+//  	if (orgBody == null) {
+//    	outputs.data = null;
+//      	outputs.status = -1;
+//      	return;
+//    }
+//  	var orgData = JSON.parse(merakiAPI.organizationData);
+//  	for ( i=0; i&lt;orgData.length; i++ ) {
+//      
+//    }
+
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>ce0620a91b27330007d52136ec4bcbe5</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 09:04:08</sys_created_on>
+        <sys_id>5a0620a91b27330007d52136ec4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 09:04:08</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ce0620a91b27330007d52136ec4bcbe5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>APIKey</field>
+        <id>ce0620a91b27330007d52136ec4bcbe5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 09:04:08</sys_created_on>
+        <sys_id>960620a91b27330007d52136ec4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 09:04:08</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_ce0620a91b27330007d52136ec4bcbe5</table>
+        <value>{{action.apikey}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>ce0620a91b27330007d52136ec4bcbe5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 09:04:08</sys_created_on>
+        <sys_id>160620a91b27330007d52136ec4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 09:04:08</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>ce0620a91b27330007d52136ec4bcbe5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 09:04:08</sys_created_on>
+        <sys_id>d60620a91b27330007d52136ec4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 09:04:08</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

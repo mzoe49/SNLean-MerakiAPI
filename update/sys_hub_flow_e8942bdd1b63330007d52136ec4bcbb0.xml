@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>collaboration_meraki2</internal_name>
+        <label_cache>[{"name":"b28a5bbd-eda1-40f2-bc1b-d50fabca405b.stutas","label":"4.1➛stutas","type":"string","base_type":"string"},{"name":"b28a5bbd-eda1-40f2-bc1b-d50fabca405b.data","label":"4.1➛data","type":"string","base_type":"string"},{"name":"5e1fd668-3244-4f66-8c81-7b75884bb6be.Count","label":"4.2➛Count","reference_display":"Count","type":"integer","base_type":"integer"},{"name":"5e1fd668-3244-4f66-8c81-7b75884bb6be.Table","label":"4.2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"5e1fd668-3244-4f66-8c81-7b75884bb6be.Records","label":"4.2➛Records","reference_display":"Records","type":"records","base_type":"records"},{"name":"0c5972a4-0274-46e1-90b3-6a25943be8fe.status","label":"4.1➛status","reference_display":"status","type":"string","base_type":"string"},{"name":"0c5972a4-0274-46e1-90b3-6a25943be8fe.orgdata","label":"4.1➛orgData","reference_display":"orgData","type":"string","base_type":"string"},{"name":"4f35b6b0-e3f7-4ff6-b746-5a034b845570.apikey","label":"2➛APIKey","reference_display":"APIKey","type":"string","base_type":"string"},{"name":"2896cd8c-cc7f-44b6-8594-2bb7ec4bcfd7.Records","label":"4.2➛Records","reference_display":"Records","type":"records","base_type":"records"},{"name":"2896cd8c-cc7f-44b6-8594-2bb7ec4bcfd7.Table","label":"4.2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"2896cd8c-cc7f-44b6-8594-2bb7ec4bcfd7.Count","label":"4.2➛Count","reference_display":"Count","type":"integer","base_type":"integer"}]</label_cache>
+        <latest_snapshot>38e78cf71b63330007d52136ec4bcb13</latest_snapshot>
+        <master_snapshot>38e78cf71b63330007d52136ec4bcb13</master_snapshot>
+        <name>collaboration_meraki2</name>
+        <outputs/>
+        <remote_trigger_id>cde78cf71b63330007d52136ec4bcb6c</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 04:18:07</sys_created_on>
+        <sys_id>e8942bdd1b63330007d52136ec4bcbb0</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>collaboration_meraki2</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sys_hub_flow_e8942bdd1b63330007d52136ec4bcbb0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-04 06:39:11</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=e8942bdd1b63330007d52136ec4bcbb0"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e8942bdd1b63330007d52136ec4bcbb0"/>
+</record_update>

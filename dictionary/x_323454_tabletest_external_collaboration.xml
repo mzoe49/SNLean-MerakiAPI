@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="external_collaboration" max_length="40" name="x_323454_tabletest_external_collaboration" type="collection">
+        <element label="Network_Id" max_length="20" name="network_id" type="string"/>
+        <element label="Serial_Number" max_length="255" name="serial_number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="U_Host_Name" max_length="100" name="u_host_name" type="string"/>
+        <element label="U_IpAddress" max_length="20" name="u_ipaddress" type="string"/>
+        <element label="U_Product_M" max_length="13" name="u_product_m" type="string"/>
+        <index name="index">
+            <element name="network_id"/>
+            <element name="serial_number"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>ScriptTest02</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-08-15 02:23:21</run_start>
+        <run_time>1969-12-31 15:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[var obj = new merakiAPI();
+gs.info("GetしたmerakiAPIKey："+obj.APIKey);
+
+//==========================================
+//organization取得
+//==========================================
+// obj.getOrganizations();
+// var orgData = JSON.parse(obj.organizationData);
+// //gs.info("GetしたorgData："+orgData);
+// gs.info("org件数："+orgData.length);
+//  for (i=0;i < orgData.length; i++)
+//  {
+//  	gs.info(orgData[i].id+" ： "+orgData[i].name);
+//  }
+//==========================================
+//network取得
+//==========================================
+// obj.getNetworks("578149602163689144");
+// var netData = JSON.parse(obj.networkData);
+// //gs.info("GetしたnetData："+netData);
+// gs.info("net件数："+netData.length);
+//  for (i=0;i < netData.length; i++)
+//  {
+//  	gs.info(netData[i].id+" ： "+netData[i].name);
+//  }
+//==========================================
+//device取得
+//==========================================
+// obj.getDevices("L_646829496481103001");
+// var deviceData = JSON.parse(obj.deviceData);
+// //gs.info("GetしたdeviceData："+deviceData);
+// gs.info("device件数："+deviceData.length);
+//  for (i=0;i < deviceData.length; i++)
+//  {
+//  	gs.info(deviceData[i].serial+" ： "+deviceData[i].model);
+//  }
+
+
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-15 02:24:20</sys_created_on>
+        <sys_id>b8ad4c511b13330007d52136ec4bcb89</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>ScriptTest02</sys_name>
+        <sys_package display_value="Collaboration_work" source="x_323454_tabletest">b77c68431b03330007d52136ec4bcb1d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Collaboration_work">b77c68431b03330007d52136ec4bcb1d</sys_scope>
+        <sys_update_name>sysauto_script_b8ad4c511b13330007d52136ec4bcb89</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-23 07:11:08</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
